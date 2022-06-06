@@ -27,7 +27,7 @@ steps:
 - task: AndroidSigning@3
   inputs:
     apkFiles: '**/*.apk' 
-    apksign: true
+    #apksign: true
     apksignerKeystoreFile: 'production.keystore'
     apksignerKeystorePassword: $(keystore.password)
     apksignerKeystoreAlias: $(key.alias)
