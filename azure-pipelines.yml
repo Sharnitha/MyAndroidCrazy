@@ -33,7 +33,7 @@ steps:
     apksignerKeystoreAlias: $(key.alias)
     apksignerKeyPassword: $(key.password)
     apksignerArguments: --out $(outputDirectory)/app.release.apk
-    zipalign: true
+    zipalign: false
 - task: CopyFiles@2
   inputs:
     SourceFolder: $(Build.SourcesDirectory)
