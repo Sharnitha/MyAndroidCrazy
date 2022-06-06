@@ -28,9 +28,9 @@ steps:
   inputs:
     apkFiles: '**/*.apk' 
     apksign: true
-    apksignerKeystoreFile: 'production.keystore'
-    apksignerKeystorePassword: $(keystore.password)
-    apksignerKeystoreAlias: $(key.alias)
-    apksignerKeyPassword: $(key.password)
-    apksignerArguments: --out $(outputDirectory)/app.release.apk
+    jarsignerKeystoreFile: 'production.keystore'
+    jarsignerKeystorePassword: $(keystore.password)
+    jarsignerKeystoreAlias: $(key.alias)
+    jarsignerKeyPassword: $(key.password)
+    jarsignerArguments: --out $(outputDirectory)/app.release.apk
     zipalign: true
