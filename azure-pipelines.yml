@@ -29,3 +29,13 @@ steps:
      targetFolder: '$(build.artifactStagingDirectory'
 
 - task: PublishBuildArtifacts@1
+
+- task: AppCenterDistribute@3
+  inputs:
+    serverEndpoint: 'Sharnitha_Appcenter'
+    appSlug: 'sharnithavijay/Sharnitha Android'
+    appFile: '$(Build.SourcesDirectory)'
+    symbolsOption: 'Android'
+    releaseNotesOption: 'input'
+    releaseNotesInput: 'My_firstappcente'
+    destinationType: 'groups'
