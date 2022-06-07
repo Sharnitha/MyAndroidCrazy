@@ -33,6 +33,7 @@ steps:
     ArtifactName: 'drop'
     publishLocation: 'Container'
 
+- script: appcenter test run espresso --app "{https://appcenter.ms/orgs/Sharnithadevops/apps/Sharnitha-Android}" --devices "Android" --app-path '$(Build.SourcesDirectory)' --test-series "master" --locale "en_US" --build-dir {Sharnitha Android} --debug
 - task: AppCenterDistribute@3
   inputs:
     serverEndpoint: 'Sharnitha_Appcenter'
