@@ -24,7 +24,8 @@ steps:
     tasks: 'assembleRelease'
 - task: CopyFiles@2
   inputs:
-     contents: '**/*.apk'
+     #contents: '**/*.apk'
+     Contents: '/*.apk'
      targetFolder: '$(build.artifactStagingDirectory)'
 
 - task: PublishBuildArtifacts@1
