@@ -43,3 +43,4 @@ steps:
     releaseNotesOption: 'input'
     releaseNotesInput: 'My_firstappcente'
     destinationType: 'groups'
+    distributionGroupId: '67ac41ad-4a85-440c-ac0e-6acda91373d4'
