@@ -10,7 +10,7 @@ pool:
   vmImage: ubuntu-latest
 resources:
  pipelines:
-  - pipeline: 'MyAndroidCrazy'
+  - pipeline: 'CI-MyAndroidCrazy'
     source: 'CI-MyAndroidCrazy'
     branch: master
 steps:  
