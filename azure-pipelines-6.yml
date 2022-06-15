@@ -10,7 +10,7 @@ pool:
   vmImage: ubuntu-latest
 resources:
  pipelines:
-  - pipeline: 'CI-MyAndroidCrazy'
+  - pipeline: 'MyAndroidApp'
     source: 'CI-MyAndroidCrazy'
     branch: master
 steps:  
@@ -18,9 +18,10 @@ steps:
   inputs:
     buildType: 'specific'
     project: '6ff3b86d-f7c4-4f43-993e-7500d51e98fb'
-    pipeline: '5'
+    pipeline: '14'
+    specificBuildWithTriggering: true
     buildVersionToDownload: 'latest'
     allowPartiallySucceededBuilds: true
-    downloadType: 'specific'
-    artifactName: '20220614.8'
+    downloadType: 'single'
+    artifactName: '20220615.1'
     downloadPath: '$(System.ArtifactsDirectory)'
