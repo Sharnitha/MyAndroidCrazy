@@ -22,4 +22,5 @@ steps:
     buildVersionToDownload: 'latest'
     allowPartiallySucceededBuilds: true
     downloadType: 'specific'
+    artifactName: '20220614.8'
     downloadPath: '$(System.ArtifactsDirectory)'
