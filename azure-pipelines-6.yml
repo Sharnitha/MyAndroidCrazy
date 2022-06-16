@@ -6,11 +6,13 @@
 
 pool:
   vmImage: ubuntu-latest
+
 resources:
  pipelines:
   - pipeline: 'sharniandapplication'
     source: 'CI-MyAndroidCrazy'
     branch: master
+
 steps:  
 - task: DownloadBuildArtifacts@1
   inputs:
@@ -21,5 +23,5 @@ steps:
     buildVersionToDownload: 'latest'
     allowPartiallySucceededBuilds: true
     downloadType: 'single'
-    artifactName: '20220615.1'
+    artifactName: '$(resources.pipeline.sharniandapplication.runId)'
     downloadPath: '$(System.ArtifactsDirectory)'
