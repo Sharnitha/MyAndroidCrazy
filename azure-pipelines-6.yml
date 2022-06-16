@@ -28,8 +28,8 @@ steps:
     project: '6ff3b86d-f7c4-4f43-993e-7500d51e98fb'
     pipeline: '14'
     specificBuildWithTriggering: true
-    buildVersionToDownload: 'latest'
-    allowPartiallySucceededBuilds: true
+    buildVersionToDownload: 'specific'
+    buildId: '150'
     downloadType: 'single'
     artifactName: '$(resources.pipeline.sharniandapplication.runId)'
     downloadPath: '$(System.ArtifactsDirectory)'
