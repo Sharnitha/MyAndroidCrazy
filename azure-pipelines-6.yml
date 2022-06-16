@@ -7,14 +7,14 @@
 pool:
   vmImage: ubuntu-latest
 
-parameters:
-  - name: demoparam
-    type: string
-    values:
-      - one
-      - two
-      - three
-    default: one
+#parameters:
+  #- name: demoparam
+   # type: string
+   # values:
+     # - one
+     # - two
+     # - three
+    #default: one
 resources:
  pipelines:
   - pipeline: 'sharniandapplication'
@@ -30,7 +30,6 @@ steps:
     specificBuildWithTriggering: true
     buildVersionToDownload: 'latest'
     allowPartiallySucceededBuilds: true
-    buildId: '$(resources.pipeline.sharniandapplication.runId)'
     downloadType: 'single'
-    artifactName: ''
+    artifactName: '$(resources.pipeline.sharniandapplication.runId)'
     downloadPath: '$(System.ArtifactsDirectory)'
