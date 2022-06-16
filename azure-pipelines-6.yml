@@ -18,7 +18,7 @@ pool:
 resources:
  pipelines:
   - pipeline: 'sharniandapplication'
-    source: 'CI-MyAndroidCrazy'
+    source: 'apkAndroidCrazy01'
     branch: master
 
 steps:  
