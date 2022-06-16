@@ -8,7 +8,7 @@ pool:
   vmImage: ubuntu-latest
 resources:
  pipelines:
-  - pipeline: 'CI-MyAndroidCrazy'
+  - pipeline: 'sharniandapplication'
     source: 'CI-MyAndroidCrazy'
     branch: master
 steps:  
