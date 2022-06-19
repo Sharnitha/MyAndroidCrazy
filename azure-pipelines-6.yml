@@ -10,7 +10,7 @@ pool:
 
 resources:
  pipelines:
-  - pipeline: 'sharniandapplication'
+  - pipeline: 'androidapplicationdemo'
     source: 'apkAndroidCrazy01'
     branch: master
 
@@ -24,7 +24,7 @@ steps:
     buildVersionToDownload: 'specific'
     buildId: '150'
     downloadType: 'single'
-    artifactName: '$(resources.pipeline.sharniandapplication.runId)'
+    artifactName: '$(resources.pipeline.androidapplicationdemo.runId)'
     downloadPath: '$(System.ArtifactsDirectory)'
   
 
