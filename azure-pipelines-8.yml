@@ -1,0 +1,30 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+trigger:
+   - none
+
+pool:
+  vmImage: ubuntu-latest
+
+resources:
+ pipelines:
+  - pipeline: 'androidapplicationdemo'
+    source: 'apkAndroidCrazy01'
+    branch: master
+
+steps:  
+- task: DownloadBuildArtifacts@1
+  inputs:
+    buildType: 'specific'
+    project: '6ff3b86d-f7c4-4f43-993e-7500d51e98fb'
+    pipeline: '14'
+    specificBuildWithTriggering: true
+    buildVersionToDownload: 'specific'
+    buildId: '150'
+    downloadType: 'single'
+    artifactName: '$(resources.pipeline.androidapplicationdemo.runId)'
+    downloadPath: '$(System.ArtifactsDirectory)'
+  
+
